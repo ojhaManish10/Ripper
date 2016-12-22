@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EEF726F4C67355C09B18F94 /* Pods_Ripper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0A4845A4B758D868434755 /* Pods_Ripper.framework */; };
+		DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */; };
+		DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */; };
 		DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */; };
 		DF7FC9BB1D9D4B19004064C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */; };
 		DF7FC9BE1D9D4B19004064C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9BC1D9D4B19004064C3 /* Main.storyboard */; };
 		DF7FC9C11D9D4B19004064C3 /* Ripper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9BF1D9D4B19004064C3 /* Ripper.xcdatamodeld */; };
 		DF7FC9C31D9D4B19004064C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9C21D9D4B19004064C3 /* Assets.xcassets */; };
 		DF7FC9C61D9D4B19004064C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9C41D9D4B19004064C3 /* LaunchScreen.storyboard */; };
+		DF7FC9CE1D9D4CE4004064C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9CD1D9D4CE4004064C3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		179C1108788D433FDEDF72AF /* Pods-Ripper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ripper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ripper/Pods-Ripper.debug.xcconfig"; sourceTree = "<group>"; };
+		7F0A4845A4B758D868434755 /* Pods_Ripper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ripper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80ACB327D0466A51941A6AF5 /* Pods-Ripper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ripper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ripper/Pods-Ripper.release.xcconfig"; sourceTree = "<group>"; };
+		DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DF7FC9B51D9D4B19004064C3 /* Ripper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		DF7FC9C21D9D4B19004064C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF7FC9C51D9D4B19004064C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF7FC9C71D9D4B19004064C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF7FC9CD1D9D4CE4004064C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ripper-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFDE68371D9E296000C96681 /* Ripper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ripper.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEF726F4C67355C09B18F94 /* Pods_Ripper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A43B5FA26E780BE25F97D15B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F0A4845A4B758D868434755 /* Pods_Ripper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0A65393A78B3E37525408D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				179C1108788D433FDEDF72AF /* Pods-Ripper.debug.xcconfig */,
+				80ACB327D0466A51941A6AF5 /* Pods-Ripper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DF7FC9AC1D9D4B19004064C3 = {
 			isa = PBXGroup;
 			children = (
 				DF7FC9B71D9D4B19004064C3 /* Ripper */,
 				DF7FC9B61D9D4B19004064C3 /* Products */,
+				C0A65393A78B3E37525408D4 /* Pods */,
+				A43B5FA26E780BE25F97D15B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,44 @@
 		DF7FC9B71D9D4B19004064C3 /* Ripper */ = {
 			isa = PBXGroup;
 			children = (
-				DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */,
-				DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */,
-				DF7FC9BC1D9D4B19004064C3 /* Main.storyboard */,
-				DF7FC9C21D9D4B19004064C3 /* Assets.xcassets */,
-				DF7FC9C41D9D4B19004064C3 /* LaunchScreen.storyboard */,
-				DF7FC9C71D9D4B19004064C3 /* Info.plist */,
-				DF7FC9BF1D9D4B19004064C3 /* Ripper.xcdatamodeld */,
+				DFBCCD281DAE01140098BA9C /* Supporting Files */,
+				DFBCCD271DAE00F80098BA9C /* Controller */,
+				DFBCCD261DAE00D20098BA9C /* View */,
 			);
 			path = Ripper;
+			sourceTree = "<group>";
+		};
+		DFBCCD261DAE00D20098BA9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */,
+				DF7FC9BC1D9D4B19004064C3 /* Main.storyboard */,
+				DF7FC9C41D9D4B19004064C3 /* LaunchScreen.storyboard */,
+				DF7FC9C21D9D4B19004064C3 /* Assets.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DFBCCD271DAE00F80098BA9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */,
+				DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */,
+				DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DFBCCD281DAE01140098BA9C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFDE68371D9E296000C96681 /* Ripper.entitlements */,
+				DF7FC9C71D9D4B19004064C3 /* Info.plist */,
+				DF7FC9CD1D9D4CE4004064C3 /* GoogleService-Info.plist */,
+				DF7FC9BF1D9D4B19004064C3 /* Ripper.xcdatamodeld */,
+				DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DF7FC9CA1D9D4B19004064C3 /* Build configuration list for PBXNativeTarget "Ripper" */;
 			buildPhases = (
+				B413916FACAFC024D016709B /* [CP] Check Pods Manifest.lock */,
 				DF7FC9B11D9D4B19004064C3 /* Sources */,
 				DF7FC9B21D9D4B19004064C3 /* Frameworks */,
 				DF7FC9B31D9D4B19004064C3 /* Resources */,
+				D9EC50898B4AB899CB1D37B1 /* [CP] Embed Pods Frameworks */,
+				EBAE2BF3FD10005B63DC746C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,7 +163,14 @@
 				TargetAttributes = {
 					DF7FC9B41D9D4B19004064C3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GN968BP7LZ;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -127,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7FC9C61D9D4B19004064C3 /* LaunchScreen.storyboard in Resources */,
+				DF7FC9CE1D9D4CE4004064C3 /* GoogleService-Info.plist in Resources */,
 				DF7FC9C31D9D4B19004064C3 /* Assets.xcassets in Resources */,
 				DF7FC9BE1D9D4B19004064C3 /* Main.storyboard in Resources */,
 			);
@@ -134,12 +206,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B413916FACAFC024D016709B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D9EC50898B4AB899CB1D37B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ripper/Pods-Ripper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBAE2BF3FD10005B63DC746C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ripper/Pods-Ripper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DF7FC9B11D9D4B19004064C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DF7FC9BB1D9D4B19004064C3 /* ViewController.swift in Sources */,
+				DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */,
+				DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */,
 				DF7FC9C11D9D4B19004064C3 /* Ripper.xcdatamodeld in Sources */,
 				DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */,
 			);
@@ -185,6 +307,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -234,6 +357,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -260,24 +384,35 @@
 		};
 		DF7FC9CB1D9D4B19004064C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 179C1108788D433FDEDF72AF /* Pods-Ripper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Ripper/Ripper.entitlements;
+				DEVELOPMENT_TEAM = GN968BP7LZ;
 				INFOPLIST_FILE = Ripper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Manish.Ripper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ripper/Ripper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		DF7FC9CC1D9D4B19004064C3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80ACB327D0466A51941A6AF5 /* Pods-Ripper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Ripper/Ripper.entitlements;
+				DEVELOPMENT_TEAM = GN968BP7LZ;
 				INFOPLIST_FILE = Ripper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Manish.Ripper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Ripper/Ripper-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -301,6 +436,7 @@
 				DF7FC9CC1D9D4B19004064C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
