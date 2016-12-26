@@ -11,16 +11,15 @@ import FirebaseAuth
 import FirebaseDatabase
 import GoogleSignIn
 
-class ViewController: UIViewController, GIDSignInUIDelegate {
+class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate {
     
     @IBOutlet var userEmail: UITextField!
     @IBOutlet var userPassword: UITextField!
     @IBOutlet var errorMessage: UILabel!
+    @IBOutlet var loader: UIActivityIndicatorView!
     
     //Referencing the Firebase database
     var databaseRef = FIRDatabase.database().reference()
-   
-
     
     
     
@@ -28,25 +27,24 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         super.viewDidLoad()
         
         
+        loader.startAnimating()
         
+        //Code to log the user directly if previously logged in
+        FIRAuth.auth()?.addStateDidChangeListener({(auth, user) in
+            
+            if user != nil{
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeViewController: UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "TabBarControllerView")
+                self.present(homeViewController, animated: true, completion: nil)
+            }
+            
+        })
 
-        if FIRAuth.auth()?.currentUser  == nil {
-            // No user is signed in.
-            print("User not signned in")
-            
-        } else {
-            
-            // User is signed in.
-            performSegue(withIdentifier: "idSegueContent", sender: nil)
-            
-            print("current userid is fucking", FIRAuth.auth()?.currentUser?.uid as Any)
-            
-        }
-        
         GIDSignIn.sharedInstance().uiDelegate = self
         
         //Defining the style of the sign in button. (1.wide 2.standard 3.iconOnly)
         signInButton.style = .wide
+        
         
         //Automatically sign in the user if not looged out previously
         GIDSignIn.sharedInstance().signInSilently()
@@ -54,11 +52,16 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         
         
+        loader.stopAnimating()
+        
     }
     
     @IBOutlet weak var signInButton: GIDSignInButton!
 
-    
+    //Hide keyboard when user touches outside the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 // MARK: - Action methods for Login
     
@@ -70,6 +73,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
     
     @IBAction func loginButtonTapped(_ sender: AnyObject) {
     
+        
         //Display alert if the users information field is empty
         if self.userEmail.text! == "" && self.userPassword.text! == "" {
             let alertController = UIAlertController(title: "Oops", message: "We can't proceed because the fields should not be empty to proceed.", preferredStyle: UIAlertControllerStyle.alert)
@@ -80,23 +84,16 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         }
 
         else{
+            loader.startAnimating()
+            
         FIRAuth.auth()?.signIn(withEmail: self.userEmail.text!, password: self.userPassword.text!, completion: {(user, error)in
             print("ya samma aayo1")
             
 
             if (error == nil){
-                //User is logged in to the system
                 
-                //to get current users data from firebase (can only get uid, photoURL and email by this way)
-                let user = FIRAuth.auth()?.currentUser
-                // The user's ID, unique to the Firebase project.
-                // Do NOT use this value to authenticate with your backend server,
-                // if you have one. Use getTokenWithCompletion:completion: instead.
-                let email = user?.email
-//                let uid = user?.uid
-//                let photoURL = user?.photoURL
+                self.loader.stopAnimating()
                 
-                print("the email of the user is", email!)
                 self.performSegue(withIdentifier: "idSegueContent", sender: nil)
                 
                 }else{
@@ -116,6 +113,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
                     
            })}
         }
-            
-
+    
+    
 }

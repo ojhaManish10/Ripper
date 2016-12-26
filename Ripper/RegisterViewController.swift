@@ -57,7 +57,7 @@ class RegisterViewController: UIViewController {
                         print("ya aayo")
                         self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue(self.userEmail.text!)
                         self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue(self.userName.text!)
-                        self.databaseRef.child("user_profiles").child(user!.uid).child("password").setValue(self.accountPassword.text!)
+                        //self.databaseRef.child("user_profiles").child(user!.uid).child("password").setValue(self.accountPassword.text!)
                         
                         self.performSegue(withIdentifier: "signUpComplete", sender: nil)
                         

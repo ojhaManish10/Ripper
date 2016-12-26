@@ -1,0 +1,6 @@
+framework module Pods_Ripper {
+  umbrella header "Pods-Ripper-umbrella.h"
+
+  export *
+  module * { export * }
+}

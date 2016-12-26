@@ -17,6 +17,8 @@
 		DF7FC9C31D9D4B19004064C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9C21D9D4B19004064C3 /* Assets.xcassets */; };
 		DF7FC9C61D9D4B19004064C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9C41D9D4B19004064C3 /* LaunchScreen.storyboard */; };
 		DF7FC9CE1D9D4CE4004064C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9CD1D9D4CE4004064C3 /* GoogleService-Info.plist */; };
+		DFBE96471E0D46FE00CC923F /* ProfileCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBE96461E0D46FE00CC923F /* ProfileCollectionViewController.swift */; };
+		DFE8CA211E0E3EFC00732D3A /* addPicToCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8CA201E0E3EFC00732D3A /* addPicToCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +37,9 @@
 		DF7FC9C71D9D4B19004064C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF7FC9CD1D9D4CE4004064C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ripper-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFBE96461E0D46FE00CC923F /* ProfileCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewController.swift; sourceTree = "<group>"; };
 		DFDE68371D9E296000C96681 /* Ripper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ripper.entitlements; sourceTree = "<group>"; };
+		DFE8CA201E0E3EFC00732D3A /* addPicToCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPicToCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +113,7 @@
 		DFBCCD271DAE00F80098BA9C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */,
-				DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */,
-				DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */,
+				DFBE96481E0D562C00CC923F /* User Profile */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -126,6 +128,18 @@
 				DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFBE96481E0D562C00CC923F /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */,
+				DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */,
+				DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */,
+				DFBE96461E0D46FE00CC923F /* ProfileCollectionViewController.swift */,
+				DFE8CA201E0E3EFC00732D3A /* addPicToCollectionViewController.swift */,
+			);
+			name = "User Profile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +277,9 @@
 				DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */,
 				DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */,
 				DF7FC9C11D9D4B19004064C3 /* Ripper.xcdatamodeld in Sources */,
+				DFBE96471E0D46FE00CC923F /* ProfileCollectionViewController.swift in Sources */,
 				DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */,
+				DFE8CA211E0E3EFC00732D3A /* addPicToCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
