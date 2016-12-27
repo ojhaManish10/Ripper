@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileCollectionViewController: UIViewController {
 
+    @IBOutlet var segmentedControl: UISegmentedControl!
+    @IBOutlet var segmentText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +33,19 @@ class ProfileCollectionViewController: UIViewController {
         
         
     }
+    
+    @IBAction func segmentedControlUsed(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            segmentText.text = "First Segment Selected";
+        case 1:
+            segmentText.text = "Second Segment Selected";
+        default:
+            break
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

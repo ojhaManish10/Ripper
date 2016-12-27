@@ -288,10 +288,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxJ-51-eja">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc0-h9-YgJ">
-                                        <rect key="frame" x="303" y="20" width="64" height="40"/>
+                                        <rect key="frame" x="303" y="20.5" width="64" height="40"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <state key="normal" title="Logout"/>
                                         <connections>
@@ -317,10 +317,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbC-Hh-6KB">
-                                <rect key="frame" x="0.0" y="60" width="375" height="243"/>
+                                <rect key="frame" x="0.0" y="60.5" width="375" height="242.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="1mr-TC-4Xk">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="288"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287.5"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydp-Pf-cPh">
                                         <rect key="frame" x="8" y="8" width="47" height="47"/>
@@ -472,11 +472,14 @@
                                     <segment title="My Collection"/>
                                     <segment title="Bookmarks"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlUsed:" destination="rfY-bN-3f8" eventType="valueChanged" id="bWt-UL-ofV"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8D-x1-Hc1">
                                 <rect key="frame" x="16" y="69" width="343" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="aCV-SB-rDE"/>
+                                    <constraint firstAttribute="height" constant="33" id="SC5-yo-4lx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
                                 <state key="normal" title="Add photo to my collection"/>
@@ -485,33 +488,49 @@
                                     <segue destination="l5H-3Y-Zgx" kind="presentation" id="4Mx-lp-MBO"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-rg-exL">
+                                <rect key="frame" x="16" y="156" width="343" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="qy7-cg-0un"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tHR-ES-T0T" secondAttribute="trailing" id="0DS-gG-Tp1"/>
-                            <constraint firstItem="reR-vd-XgV" firstAttribute="leading" secondItem="N5Z-tW-dDZ" secondAttribute="leadingMargin" id="0hY-0y-6uq"/>
-                            <constraint firstItem="e8D-x1-Hc1" firstAttribute="top" secondItem="N5Z-tW-dDZ" secondAttribute="top" constant="69" id="30L-z1-NKJ"/>
-                            <constraint firstItem="reR-vd-XgV" firstAttribute="trailing" secondItem="e8D-x1-Hc1" secondAttribute="trailing" id="3AE-Ri-Oz3"/>
-                            <constraint firstItem="e8D-x1-Hc1" firstAttribute="top" secondItem="tHR-ES-T0T" secondAttribute="bottom" constant="9" id="3cd-3B-X3a"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="bottom" secondItem="M1y-6L-6Zo" secondAttribute="bottom" id="Hvw-Gf-O8B"/>
-                            <constraint firstItem="reR-vd-XgV" firstAttribute="trailing" secondItem="M1y-6L-6Zo" secondAttribute="trailing" id="J5O-fs-uPG"/>
+                            <constraint firstItem="e8D-x1-Hc1" firstAttribute="centerX" secondItem="smI-yc-983" secondAttribute="centerX" id="LxH-kk-8Q9"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="firstBaseline" secondItem="M1y-6L-6Zo" secondAttribute="firstBaseline" id="MXi-ml-YXv"/>
+                            <constraint firstItem="Yho-rg-exL" firstAttribute="leading" secondItem="reR-vd-XgV" secondAttribute="leading" id="MyN-5K-K6V"/>
+                            <constraint firstItem="e8D-x1-Hc1" firstAttribute="top" secondItem="tHR-ES-T0T" secondAttribute="bottom" constant="9" id="NfP-Ah-BPB"/>
+                            <constraint firstItem="Yho-rg-exL" firstAttribute="top" secondItem="reR-vd-XgV" secondAttribute="bottom" constant="8" symbolic="YES" id="TcA-iB-j6S"/>
                             <constraint firstItem="tHR-ES-T0T" firstAttribute="top" secondItem="N5Z-tW-dDZ" secondAttribute="top" id="UB6-Cd-n3o"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="firstBaseline" secondItem="M1y-6L-6Zo" secondAttribute="baseline" id="Vjy-i5-ML6"/>
-                            <constraint firstItem="reR-vd-XgV" firstAttribute="leading" secondItem="e8D-x1-Hc1" secondAttribute="leading" id="YQu-Ud-xvr"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="trailing" secondItem="M1y-6L-6Zo" secondAttribute="trailing" id="bsT-wl-8QA"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="leading" secondItem="N5Z-tW-dDZ" secondAttribute="leadingMargin" constant="-8" id="dEJ-0W-I6I"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="leading" secondItem="e8D-x1-Hc1" secondAttribute="leading" id="fgS-BY-mK0"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="leading" secondItem="N5Z-tW-dDZ" secondAttribute="leadingMargin" id="jzY-ZH-R8D"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="trailing" secondItem="e8D-x1-Hc1" secondAttribute="trailing" id="kSK-6b-HS5"/>
                             <constraint firstItem="tHR-ES-T0T" firstAttribute="centerX" secondItem="smI-yc-983" secondAttribute="centerX" id="o4w-jC-IQ5"/>
-                            <constraint firstItem="smI-yc-983" firstAttribute="centerX" secondItem="e8D-x1-Hc1" secondAttribute="centerX" id="qiZ-j0-1sb"/>
                             <constraint firstItem="tHR-ES-T0T" firstAttribute="leading" secondItem="N5Z-tW-dDZ" secondAttribute="leading" id="suz-yJ-IiK"/>
-                            <constraint firstItem="reR-vd-XgV" firstAttribute="top" secondItem="e8D-x1-Hc1" secondAttribute="bottom" constant="18" id="tuk-GB-qjw"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="top" secondItem="e8D-x1-Hc1" secondAttribute="bottom" constant="18" id="twU-pR-1ai"/>
                             <constraint firstItem="M1y-6L-6Zo" firstAttribute="top" secondItem="e7y-Zg-59V" secondAttribute="bottom" id="uZF-dq-pIC"/>
+                            <constraint firstItem="Yho-rg-exL" firstAttribute="trailing" secondItem="reR-vd-XgV" secondAttribute="trailing" id="y9k-VJ-xZy"/>
+                            <constraint firstItem="e8D-x1-Hc1" firstAttribute="top" secondItem="N5Z-tW-dDZ" secondAttribute="top" constant="69" id="yxn-Gv-lUj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Profile" id="z1F-sr-Q4j"/>
+                    <connections>
+                        <outlet property="segmentText" destination="Yho-rg-exL" id="kK4-Ct-ZJa"/>
+                        <outlet property="segmentedControl" destination="reR-vd-XgV" id="Fll-3H-HfO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqH-H9-rqp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="780"/>
+            <point key="canvasLocation" x="2276" y="779.46026986506752"/>
         </scene>
         <!--Add Pic To Collection View Controller-->
         <scene sceneID="asX-Wp-5Ot">
