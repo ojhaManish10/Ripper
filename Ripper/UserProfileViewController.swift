@@ -52,18 +52,16 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         self.profileTableView.dataSource = self
         
         // Code to retrieve specific data form FIrebase.
-        databaseRef.child("user_profiles").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+        databaseRef.child("User_Profiles").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            let username = (value?["name"] as! String)
+            let username = (value?["Name"] as! String)
             self.userNameTitle.text = username
         
             self.profileImageLoader.startAnimating()
-            if ((value?["profile_pic"]) != nil){
+            if ((value?["Profile_Picture"]) != nil){
                 
-                print("THe asdlkfjaksdjf is ", (value?["profile_pic"])!)
-                
-                let databaseProfilePic = (value?["profile_pic"] as! String)
+                let databaseProfilePic = (value?["Profile_Picture"] as! String)
                 
                 let data = NSData(contentsOf: NSURL(string: databaseProfilePic)! as URL)
                 
@@ -157,15 +155,15 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
             self.addProfilePic.isEnabled = false
             self.profileImageLoader.startAnimating()
             
-            let profilePicStorageRef = storageRef.child("user_profiles/\(userID!)/profile_pic")
+            let profilePicStorageRef = storageRef.child("User_Profiles/\(userID!)/Profile_Picture")
             
-            _ = profilePicStorageRef.put(imageData as Data, metadata: nil)
+            profilePicStorageRef.put(imageData as Data, metadata: nil)
             {metadata,Error in
             
                 if (Error == nil){
                     let downloadUrl = metadata!.downloadURL()
                     
-                    self.databaseRef.child("user_profiles").child(self.userID!).child("profile_pic").setValue(downloadUrl!.absoluteString)
+                    self.databaseRef.child("User_Profiles").child(self.userID!).child("Profile_Picture").setValue(downloadUrl!.absoluteString)
                 }else{
                     print("THe shit error is ", Error?.localizedDescription as Any)
                 }
@@ -206,10 +204,10 @@ class UserProfileViewController: UIViewController, UIImagePickerControllerDelega
         let cellIdentifier: String = "profileCell"
         let myCell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)!
         
-        databaseRef.child("user_profiles").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+        databaseRef.child("User_Profiles").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
-            let username = (value?["name"] as! String)
+            let username = (value?["Name"] as! String)
             
             myCell.textLabel?.text = username
             

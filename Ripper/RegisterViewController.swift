@@ -21,6 +21,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet var retypePassword: UITextField!
     @IBOutlet var signUpButton: UIButton!
     @IBOutlet var errorMessage: UILabel!
+    @IBOutlet var loader: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func tappedSignUpButton(_ sender: AnyObject) {
         
+        loader.startAnimating()
         signUpButton.isEnabled = false
         
         FIRAuth.auth()?.createUser(withEmail: userEmail.text!, password: accountPassword.text!, completion: {(user, Error)in
@@ -55,10 +57,11 @@ class RegisterViewController: UIViewController {
                     
                     if (Error == nil){
                         print("ya aayo")
-                        self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue(self.userEmail.text!)
-                        self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue(self.userName.text!)
-                        //self.databaseRef.child("user_profiles").child(user!.uid).child("password").setValue(self.accountPassword.text!)
+                        self.databaseRef.child("User_Profiles").child(user!.uid).child("Email").setValue(self.userEmail.text!)
+                        self.databaseRef.child("User_Profiles").child(user!.uid).child("Name").setValue(self.userName.text!)
+                        //self.databaseRef.child("User_Profiles").child(user!.uid).child("password").setValue(self.accountPassword.text!)
                         
+                        self.loader.stopAnimating()
                         self.performSegue(withIdentifier: "signUpComplete", sender: nil)
                         
                     }

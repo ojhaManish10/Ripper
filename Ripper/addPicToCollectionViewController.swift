@@ -198,7 +198,7 @@ class addPicToCollectionViewController: UIViewController, UITextFieldDelegate, U
             }
         }
         
-        let tweetLength = imageDesTextView.text.characters.count
+        let decLength = imageDesTextView.text.characters.count
         let numImages = imagesArray.count //to store the number of images
         
         //create a unique auto generated key from firebase database
@@ -206,12 +206,12 @@ class addPicToCollectionViewController: UIViewController, UITextFieldDelegate, U
         
         let storageRef = FIRStorage.storage().reference()
         //creating a reference for the exact location for storing the imgae
-        let pictureStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/media/\(key)")
+        let pictureStorageRef = storageRef.child("User_Profiles/\(self.loggedInUser!.uid!)/media/\(key)")
         
         //reduce resolution of selected picture
         
         //user has entered text and an image
-        if(tweetLength>0 && numImages>0)
+        if(decLength>0 && numImages>0)
         {
             let lowResImageData = UIImageJPEGRepresentation(imagesArray[0] as! UIImage, 0.50)
             
@@ -235,7 +235,7 @@ class addPicToCollectionViewController: UIViewController, UITextFieldDelegate, U
         }
         
         //user has entered only text
-        else if(tweetLength>0)
+        else if(decLength>0)
         {
             let childUpdates = ["/image_description/\(self.loggedInUser!.uid!)/\(key)/text":imageDesTextView.text,
                                 "/image_description/\(self.loggedInUser!.uid!)/\(key)/timestamp":"\(Date().timeIntervalSince1970)"] as [String : Any]

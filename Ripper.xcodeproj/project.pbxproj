@@ -12,6 +12,7 @@
 		DF4A478A1E13854A000222BA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A47891E13854A000222BA /* MaterialView.swift */; };
 		DF4A478C1E1388C1000222BA /* MaterialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A478B1E1388C1000222BA /* MaterialButton.swift */; };
 		DF4A478E1E1389AC000222BA /* MaterialTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A478D1E1389AC000222BA /* MaterialTextField.swift */; };
+		DF4A47901E13DA82000222BA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A478F1E13DA82000222BA /* DataService.swift */; };
 		DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */; };
 		DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */; };
 		DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		DF4A47891E13854A000222BA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		DF4A478B1E1388C1000222BA /* MaterialButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialButton.swift; sourceTree = "<group>"; };
 		DF4A478D1E1389AC000222BA /* MaterialTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialTextField.swift; sourceTree = "<group>"; };
+		DF4A478F1E13DA82000222BA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DF7FC9B51D9D4B19004064C3 /* Ripper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 				DF7FC9BF1D9D4B19004064C3 /* Ripper.xcdatamodeld */,
 				DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */,
 				DF4A47871E138531000222BA /* Constraints.swift */,
+				DF4A478F1E13DA82000222BA /* DataService.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				DF7FC9BB1D9D4B19004064C3 /* ViewController.swift in Sources */,
 				DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */,
 				DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */,
+				DF4A47901E13DA82000222BA /* DataService.swift in Sources */,
 				DF4A478E1E1389AC000222BA /* MaterialTextField.swift in Sources */,
 				DF4A478A1E13854A000222BA /* MaterialView.swift in Sources */,
 				DF4A478C1E1388C1000222BA /* MaterialButton.swift in Sources */,

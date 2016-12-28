@@ -73,14 +73,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         self.databaseRef = FIRDatabase.database().reference()
         
         //Checking if the user has their information stored in the database or not
-        self.databaseRef.child("user_profiles").child(user!.uid).observeSingleEvent(of: .value, with: { (sanpshot) in
+        self.databaseRef.child("User_Profiles").child(user!.uid).observeSingleEvent(of: .value, with: { (sanpshot) in
             
             let sanpshot = sanpshot.value as? NSDictionary
             
             if(sanpshot == nil){ //Calls if the user is logged in for the first time
                 
-                self.databaseRef.child("user_profiles").child(user!.uid).child("name").setValue(user?.displayName)
-                self.databaseRef.child("user_profiles").child(user!.uid).child("email").setValue(user?.email)
+                self.databaseRef.child("User_Profiles").child(user!.uid).child("Name").setValue(user?.displayName)
+                self.databaseRef.child("User_Profiles").child(user!.uid).child("Email").setValue(user?.email)
             
             }
                 //Calls if the user is previously logged in

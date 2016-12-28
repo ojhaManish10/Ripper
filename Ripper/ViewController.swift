@@ -91,9 +91,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
             
 
             if (error == nil){
-                
-                self.loader.stopAnimating()
-                
+
                 self.performSegue(withIdentifier: "idSegueContent", sender: nil)
                 
                 }else{
@@ -106,6 +104,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, UITextFieldDelegate
                     let alertController = UIAlertController(title: "Oops", message: "Either the Email or Password entered is wrong", preferredStyle: UIAlertControllerStyle.alert)
                     alertController.addAction(UIAlertAction(title: "Try again", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alertController, animated: true, completion: nil)
+                self.loader.stopAnimating()
                     
                     return
                     
