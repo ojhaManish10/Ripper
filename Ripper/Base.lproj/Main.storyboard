@@ -44,7 +44,7 @@
                                 <rect key="frame" x="36" y="184" width="303" height="239"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zr0-fp-jV7">
-                                        <rect key="frame" x="126.5" y="0.0" width="50" height="35"/>
+                                        <rect key="frame" x="127" y="0.0" width="50" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -288,10 +288,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxJ-51-eja">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc0-h9-YgJ">
-                                        <rect key="frame" x="303" y="20.5" width="64" height="40"/>
+                                        <rect key="frame" x="303" y="21" width="64" height="40"/>
                                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="20"/>
                                         <state key="normal" title="Logout"/>
                                         <connections>
@@ -317,10 +317,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbC-Hh-6KB">
-                                <rect key="frame" x="0.0" y="60.5" width="375" height="242.5"/>
+                                <rect key="frame" x="0.0" y="61" width="375" height="242"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="1mr-TC-4Xk">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ydp-Pf-cPh">
                                         <rect key="frame" x="8" y="8" width="47" height="47"/>
@@ -335,7 +335,7 @@
                                         </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="eYb-M1-f3W">
-                                        <rect key="frame" x="169" y="125" width="37" height="37"/>
+                                        <rect key="frame" x="169" y="124" width="37" height="37"/>
                                         <color key="color" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="691-cZ-g2b">
@@ -452,6 +452,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sM2-6Y-o6X" customClass="MaterialView" customModule="Ripper" customModuleProvider="target">
+                                <rect key="frame" x="16" y="110" width="343" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smI-yc-983">
                                 <rect key="frame" x="8" y="25" width="359" height="33"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
@@ -467,7 +471,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="reR-vd-XgV">
-                                <rect key="frame" x="16" y="120" width="343" height="29"/>
+                                <rect key="frame" x="16" y="181" width="343" height="29"/>
                                 <segments>
                                     <segment title="My Collection"/>
                                     <segment title="Bookmarks"/>
@@ -489,7 +493,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-rg-exL">
-                                <rect key="frame" x="16" y="156" width="343" height="46"/>
+                                <rect key="frame" x="32" y="305" width="343" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="qy7-cg-0un"/>
                                 </constraints>
@@ -501,14 +505,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tHR-ES-T0T" secondAttribute="trailing" id="0DS-gG-Tp1"/>
+                            <constraint firstItem="sM2-6Y-o6X" firstAttribute="leading" secondItem="e8D-x1-Hc1" secondAttribute="leading" id="7aF-Bj-EgD"/>
+                            <constraint firstItem="sM2-6Y-o6X" firstAttribute="trailing" secondItem="e8D-x1-Hc1" secondAttribute="trailing" id="FbV-ns-Pq4"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="bottom" secondItem="M1y-6L-6Zo" secondAttribute="bottom" id="Hvw-Gf-O8B"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="top" secondItem="sM2-6Y-o6X" secondAttribute="bottom" constant="18" id="LSo-4D-RfV"/>
                             <constraint firstItem="e8D-x1-Hc1" firstAttribute="centerX" secondItem="smI-yc-983" secondAttribute="centerX" id="LxH-kk-8Q9"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="firstBaseline" secondItem="M1y-6L-6Zo" secondAttribute="firstBaseline" id="MXi-ml-YXv"/>
-                            <constraint firstItem="Yho-rg-exL" firstAttribute="leading" secondItem="reR-vd-XgV" secondAttribute="leading" id="MyN-5K-K6V"/>
+                            <constraint firstItem="Yho-rg-exL" firstAttribute="leading" secondItem="reR-vd-XgV" secondAttribute="leading" constant="16" id="MyN-5K-K6V"/>
                             <constraint firstItem="e8D-x1-Hc1" firstAttribute="top" secondItem="tHR-ES-T0T" secondAttribute="bottom" constant="9" id="NfP-Ah-BPB"/>
-                            <constraint firstItem="Yho-rg-exL" firstAttribute="top" secondItem="reR-vd-XgV" secondAttribute="bottom" constant="8" symbolic="YES" id="TcA-iB-j6S"/>
+                            <constraint firstItem="Yho-rg-exL" firstAttribute="top" secondItem="reR-vd-XgV" secondAttribute="bottom" constant="96" id="TcA-iB-j6S"/>
                             <constraint firstItem="tHR-ES-T0T" firstAttribute="top" secondItem="N5Z-tW-dDZ" secondAttribute="top" id="UB6-Cd-n3o"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="firstBaseline" secondItem="M1y-6L-6Zo" secondAttribute="baseline" id="Vjy-i5-ML6"/>
+                            <constraint firstItem="sM2-6Y-o6X" firstAttribute="top" secondItem="e8D-x1-Hc1" secondAttribute="bottom" constant="8" symbolic="YES" id="ZTS-rK-9R1"/>
                             <constraint firstItem="reR-vd-XgV" firstAttribute="trailing" secondItem="M1y-6L-6Zo" secondAttribute="trailing" id="bsT-wl-8QA"/>
                             <constraint firstItem="smI-yc-983" firstAttribute="leading" secondItem="N5Z-tW-dDZ" secondAttribute="leadingMargin" constant="-8" id="dEJ-0W-I6I"/>
                             <constraint firstItem="reR-vd-XgV" firstAttribute="leading" secondItem="e8D-x1-Hc1" secondAttribute="leading" id="fgS-BY-mK0"/>
@@ -516,9 +524,9 @@
                             <constraint firstItem="reR-vd-XgV" firstAttribute="trailing" secondItem="e8D-x1-Hc1" secondAttribute="trailing" id="kSK-6b-HS5"/>
                             <constraint firstItem="tHR-ES-T0T" firstAttribute="centerX" secondItem="smI-yc-983" secondAttribute="centerX" id="o4w-jC-IQ5"/>
                             <constraint firstItem="tHR-ES-T0T" firstAttribute="leading" secondItem="N5Z-tW-dDZ" secondAttribute="leading" id="suz-yJ-IiK"/>
-                            <constraint firstItem="reR-vd-XgV" firstAttribute="top" secondItem="e8D-x1-Hc1" secondAttribute="bottom" constant="18" id="twU-pR-1ai"/>
+                            <constraint firstItem="reR-vd-XgV" firstAttribute="top" secondItem="e8D-x1-Hc1" secondAttribute="bottom" constant="79" id="twU-pR-1ai"/>
                             <constraint firstItem="M1y-6L-6Zo" firstAttribute="top" secondItem="e7y-Zg-59V" secondAttribute="bottom" id="uZF-dq-pIC"/>
-                            <constraint firstItem="Yho-rg-exL" firstAttribute="trailing" secondItem="reR-vd-XgV" secondAttribute="trailing" id="y9k-VJ-xZy"/>
+                            <constraint firstItem="Yho-rg-exL" firstAttribute="trailing" secondItem="reR-vd-XgV" secondAttribute="trailing" constant="16" id="y9k-VJ-xZy"/>
                             <constraint firstItem="e8D-x1-Hc1" firstAttribute="top" secondItem="N5Z-tW-dDZ" secondAttribute="top" constant="69" id="yxn-Gv-lUj"/>
                         </constraints>
                     </view>
@@ -798,7 +806,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="REW-5R-4EK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="recents" id="7C0-LV-LY6"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Px7-oJ-7WA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Px7-oJ-7WA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

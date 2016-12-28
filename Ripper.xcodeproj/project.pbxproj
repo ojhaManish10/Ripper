@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4EEF726F4C67355C09B18F94 /* Pods_Ripper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0A4845A4B758D868434755 /* Pods_Ripper.framework */; };
+		DF4A47841E137F9A000222BA /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A47831E137F9A000222BA /* MaterialView.swift */; };
+		DF4A47861E13824F000222BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A47851E13824F000222BA /* Constants.swift */; };
 		DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */; };
 		DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */; };
 		DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 		179C1108788D433FDEDF72AF /* Pods-Ripper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ripper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ripper/Pods-Ripper.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0A4845A4B758D868434755 /* Pods_Ripper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ripper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80ACB327D0466A51941A6AF5 /* Pods-Ripper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ripper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ripper/Pods-Ripper.release.xcconfig"; sourceTree = "<group>"; };
+		DF4A47831E137F9A000222BA /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		DF4A47851E13824F000222BA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DF7FC9B51D9D4B19004064C3 /* Ripper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,7 @@
 				DF7FC9BC1D9D4B19004064C3 /* Main.storyboard */,
 				DF7FC9C41D9D4B19004064C3 /* LaunchScreen.storyboard */,
 				DF7FC9C21D9D4B19004064C3 /* Assets.xcassets */,
+				DF4A47831E137F9A000222BA /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				DF7FC9CD1D9D4CE4004064C3 /* GoogleService-Info.plist */,
 				DF7FC9BF1D9D4B19004064C3 /* Ripper.xcdatamodeld */,
 				DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */,
+				DF4A47851E13824F000222BA /* Constants.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -280,6 +286,8 @@
 				DFBE96471E0D46FE00CC923F /* ProfileCollectionViewController.swift in Sources */,
 				DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */,
 				DFE8CA211E0E3EFC00732D3A /* addPicToCollectionViewController.swift in Sources */,
+				DF4A47841E137F9A000222BA /* MaterialView.swift in Sources */,
+				DF4A47861E13824F000222BA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
