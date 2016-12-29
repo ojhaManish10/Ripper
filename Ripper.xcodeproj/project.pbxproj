@@ -15,6 +15,7 @@
 		DF4A47901E13DA82000222BA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A478F1E13DA82000222BA /* DataService.swift */; };
 		DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */; };
 		DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */; };
+		DF6AA82C1E14ED3300E5F1F1 /* BrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AA82B1E14ED3300E5F1F1 /* BrandsViewController.swift */; };
 		DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */; };
 		DF7FC9BB1D9D4B19004064C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */; };
 		DF7FC9BE1D9D4B19004064C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9BC1D9D4B19004064C3 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		DF4A478F1E13DA82000222BA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DF6AA82B1E14ED3300E5F1F1 /* BrandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsViewController.swift; sourceTree = "<group>"; };
 		DF7FC9B51D9D4B19004064C3 /* Ripper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,14 @@
 				80ACB327D0466A51941A6AF5 /* Pods-Ripper.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DF6AA82A1E14ED1800E5F1F1 /* Guitar Brands */ = {
+			isa = PBXGroup;
+			children = (
+				DF6AA82B1E14ED3300E5F1F1 /* BrandsViewController.swift */,
+			);
+			name = "Guitar Brands";
 			sourceTree = "<group>";
 		};
 		DF7FC9AC1D9D4B19004064C3 = {
@@ -126,6 +136,7 @@
 		DFBCCD271DAE00F80098BA9C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DF6AA82A1E14ED1800E5F1F1 /* Guitar Brands */,
 				DFBE96481E0D562C00CC923F /* User Profile */,
 			);
 			name = Controller;
@@ -300,6 +311,7 @@
 				DFBE96471E0D46FE00CC923F /* ProfileCollectionViewController.swift in Sources */,
 				DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */,
 				DFE8CA211E0E3EFC00732D3A /* addPicToCollectionViewController.swift in Sources */,
+				DF6AA82C1E14ED3300E5F1F1 /* BrandsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

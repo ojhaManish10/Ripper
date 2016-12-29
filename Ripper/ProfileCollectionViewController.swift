@@ -16,7 +16,6 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
 
     @IBOutlet var imageDec: UITextField!
     @IBOutlet var showImage: UIImageView!
-    @IBOutlet var loader: UIActivityIndicatorView!
     
     var loggedInUser: AnyObject?
     var databaseRef = FIRDatabase.database().reference()
@@ -63,8 +62,6 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
     }
     
     @IBAction func makePost(_ sender: Any) {
-        
-        loader.startAnimating()
         
         var imagesArray = [AnyObject]()
         imagesArray.append(showImage.image!)
@@ -121,7 +118,6 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
                 myAlert.addAction(okAction)
                 self.present(myAlert, animated: true, completion: nil)
             })
-            loader.stopAnimating()
         }
             
         //user has entered only an image
@@ -149,8 +145,6 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
                 
             }
         }
-//        loader.stopAnimating()
-        loader.stopAnimating()
     }
     
 

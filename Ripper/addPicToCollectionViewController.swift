@@ -129,7 +129,7 @@ class addPicToCollectionViewController: UIViewController, UITextFieldDelegate, U
     //after user has picked an image from photo gallery, this function will be called
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         
-        var selectedProfileImageFromPicker: UIImage?
+        //var selectedProfileImageFromPicker: UIImage?
         
         //Adding image using the attributed string
         //Attaches meadia with the text
@@ -215,7 +215,7 @@ class addPicToCollectionViewController: UIViewController, UITextFieldDelegate, U
         {
             let lowResImageData = UIImageJPEGRepresentation(imagesArray[0] as! UIImage, 0.50)
             
-            let uploadTask = pictureStorageRef.put(lowResImageData!,metadata: nil)
+            pictureStorageRef.put(lowResImageData!,metadata: nil)
             {metadata,error in
                 
                 if(error == nil)
@@ -251,7 +251,7 @@ class addPicToCollectionViewController: UIViewController, UITextFieldDelegate, U
         {
             let lowResImageData = UIImageJPEGRepresentation(imagesArray[0] as! UIImage, 0.50)
             
-            let uploadTask = pictureStorageRef.put(lowResImageData!,metadata: nil)
+            pictureStorageRef.put(lowResImageData!,metadata: nil)
             {metadata,error in
                 
                 if(error == nil)
