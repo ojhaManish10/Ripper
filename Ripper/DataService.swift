@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 
@@ -17,17 +18,16 @@ let STORAGE_BASE = FIRStorage.storage().reference()
 class DataService {
     
     
-    static let sharedInstance = DataService()
-    
+    static let ds = DataService()
     
     // DB references
     private var _REF_BASE = DB_BASE
-    private var _REF_POSTS = DB_BASE.child("posts")
-    private var _REF_USERS = DB_BASE.child("users")
+    private var _REF_POSTS = DB_BASE.child("Image_Collection/\((FIRAuth.auth()?.currentUser?.uid)!)")
+    private var _REF_USERS = DB_BASE.child("User_Profiles")
     
     
     // Storage references
-    private var _REF_POST_IMAGES = STORAGE_BASE.child("post-pics")
+    private var _REF_POST_IMAGES = STORAGE_BASE.child("media")
     
     
     var REF_BASE: FIRDatabaseReference {

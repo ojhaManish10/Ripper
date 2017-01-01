@@ -12,23 +12,86 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class ProfileCollectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+class ProfileCollectionViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
+    @IBOutlet var loader: UIActivityIndicatorView!
+    
+    
+    @IBOutlet var saveButton: MaterialButton!
     @IBOutlet var imageDec: UITextField!
     @IBOutlet var showImage: UIImageView!
-    
+    @IBOutlet var collectionView: UICollectionView!
+
+    let userID = FIRAuth.auth()?.currentUser?.uid
+    var imagesArray = [AnyObject]()
     var loggedInUser: AnyObject?
+    var loggedInUserData: AnyObject?
+    var collections = [Collection]()
     var databaseRef = FIRDatabase.database().reference()
+    var imageSelected = false
+    
+    //create a unique auto generated key from firebase database
+    let key = FIRDatabase.database().reference().child("Image_Collection").childByAutoId().key
+
     
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.loggedInUser = FIRAuth.auth()?.currentUser
-        // Do any additional setup after loading the view.
+        loader.startAnimating()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        //get all the collection that are saved by the user
+            self.collections.removeAll()
+            DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot]{
+                
+                for snap in snapshots{
+                    if let collDict = snap.value as? Dictionary<String, AnyObject>{
+                        let key = snap.key
+                        let collection = Collection(postKey: key, dictionary: collDict)
+                        
+                        
+                        
+                        self.collections.append(collection)
+                        
+                        print("MANISH 1:", self.collections.count)
+                    }
+                }
+            }
+                self.loader.stopAnimating()
+                
+            self.collectionView.reloadData()
+        })
     }
 
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("MANISH:", collections.count)
+        return collections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let collection = collections[indexPath.row]
+        
+        let cell:ImageCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollection", for: indexPath as IndexPath) as! ImageCollectionViewCell
+        
+        
+        let url = NSURL(string: collection.imageUrl)
+        let data = NSData(contentsOf: url as! URL)
+        cell.collectionImage.image = UIImage(data: data as! Data)
+        return cell
+        
+    }
+    
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,7 +113,6 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
             self.imagePicker.allowsEditing = true
             self.present(self.imagePicker, animated: true, completion: nil)
         }
-
     }
 
     //after user has picked an image from photo gallery, this function will be called
@@ -58,28 +120,28 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
     
         showImage.image = image
         self.dismiss(animated: true, completion: nil)
+        imageSelected = true
     
     }
     
     @IBAction func makePost(_ sender: Any) {
         
+        loader.startAnimating()
         var imagesArray = [AnyObject]()
         imagesArray.append(showImage.image!)
         
         let decLength = imageDec.text?.characters.count
         let numImages = imagesArray.count //to store the number of images
         
-        //create a unique auto generated key from firebase database
-        let key = self.databaseRef.child("Image_Collection").childByAutoId().key
         
         let storageRef = FIRStorage.storage().reference()
         //creating a reference for the exact location for storing the imgae
-        let pictureStorageRef = storageRef.child("User_Profiles/\(self.loggedInUser!.uid!)/media/\(key)")
+        let pictureStorageRef = storageRef.child("User_Profiles/\(userID!)/media/\(key)")
         
         //reduce resolution of selected picture
         
         //user has entered text and an image
-        if(decLength!>0 && numImages>0)
+        if(decLength!>0 && imageSelected == true)
         {
             let lowResImageData = UIImageJPEGRepresentation(imagesArray[0] as! UIImage, 0.50)
             
@@ -90,9 +152,9 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
                 {
                     let downloadUrl = metadata!.downloadURL()
                     
-                    let childUpdates = ["/Image_Collection/\(self.loggedInUser!.uid!)/\(key)/text":self.imageDec.text!,
-                                        "/Image_Collection/\(self.loggedInUser!.uid!)/\(key)/timestamp":"\(Date().timeIntervalSince1970)",
-                        "/Image_Collection/\(self.loggedInUser!.uid!)/\(key)/picture":downloadUrl!.absoluteString] as [String : Any]
+                    let childUpdates = ["/Image_Collection/\(self.userID!)/\(self.key)/text":self.imageDec.text!,
+                                        "/Image_Collection/\(self.userID!)/\(self.key)/timestamp":"\(Date().timeIntervalSince1970)",
+                        "/Image_Collection/\(self.userID!)/\(self.key)/picture":downloadUrl!.absoluteString] as [String : Any]
                     
                     self.databaseRef.updateChildValues(childUpdates)
                 }
@@ -101,7 +163,7 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
         }
             
         //user has entered only text
-        else if(decLength!>0)
+        else if(imageSelected == false)
         {
             
             DispatchQueue.main.async(execute: {
@@ -133,8 +195,8 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
                     let downloadUrl = metadata!.downloadURL()
                     
                     let childUpdates = [
-                        "/Image_Collection/\(self.loggedInUser!.uid!)/\(key)/timestamp":"\(Date().timeIntervalSince1970)",
-                        "/Image_Collection/\(self.loggedInUser!.uid!)/\(key)/picture":downloadUrl!.absoluteString]
+                        "/Image_Collection/\(self.userID!)/\(self.key)/timestamp":"\(Date().timeIntervalSince1970)",
+                        "/Image_Collection/\(self.userID!)/\(self.key)/picture":downloadUrl!.absoluteString]
                     
                     self.databaseRef.updateChildValues(childUpdates)
                 }
@@ -145,10 +207,14 @@ class ProfileCollectionViewController: UIViewController, UIImagePickerController
                 
             }
         }
+        
+        imageDec.text = ""
+        imageSelected = false
+        showImage.image = UIImage(named: "Camera")
+        
+        loader.stopAnimating()
     }
     
-
-
     /*
     // MARK: - Navigation
 

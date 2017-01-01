@@ -16,6 +16,8 @@
 		DF65D81E1DC3044A00DCE63B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */; };
 		DF68E43C1DA8C7F100AB531E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */; };
 		DF6AA82C1E14ED3300E5F1F1 /* BrandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AA82B1E14ED3300E5F1F1 /* BrandsViewController.swift */; };
+		DF765CFD1E1790B40071C038 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CFC1E1790B40071C038 /* ImageCollectionViewCell.swift */; };
+		DF7D61271E18ED790066675B /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7D61261E18ED790066675B /* Collection.swift */; };
 		DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */; };
 		DF7FC9BB1D9D4B19004064C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */; };
 		DF7FC9BE1D9D4B19004064C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF7FC9BC1D9D4B19004064C3 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DF6AA82B1E14ED3300E5F1F1 /* BrandsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsViewController.swift; sourceTree = "<group>"; };
+		DF765CFC1E1790B40071C038 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DF7D61261E18ED790066675B /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		DF7FC9B51D9D4B19004064C3 /* Ripper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ripper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF7FC9B81D9D4B19004064C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DF7FC9BA1D9D4B19004064C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 			name = "Guitar Brands";
 			sourceTree = "<group>";
 		};
+		DF7D61251E18ED6B0066675B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF7D61261E18ED790066675B /* Collection.swift */,
+				DF4A478F1E13DA82000222BA /* DataService.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		DF7FC9AC1D9D4B19004064C3 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 		DF7FC9B71D9D4B19004064C3 /* Ripper */ = {
 			isa = PBXGroup;
 			children = (
+				DF7D61251E18ED6B0066675B /* Model */,
 				DFBCCD281DAE01140098BA9C /* Supporting Files */,
 				DFBCCD271DAE00F80098BA9C /* Controller */,
 				DFBCCD261DAE00D20098BA9C /* View */,
@@ -151,7 +165,6 @@
 				DF7FC9BF1D9D4B19004064C3 /* Ripper.xcdatamodeld */,
 				DF7FC9CF1D9D4F82004064C3 /* Ripper-Bridging-Header.h */,
 				DF4A47871E138531000222BA /* Constraints.swift */,
-				DF4A478F1E13DA82000222BA /* DataService.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,6 +176,7 @@
 				DF68E43B1DA8C7F100AB531E /* RegisterViewController.swift */,
 				DF65D81D1DC3044A00DCE63B /* UserProfileViewController.swift */,
 				DFBE96461E0D46FE00CC923F /* ProfileCollectionViewController.swift */,
+				DF765CFC1E1790B40071C038 /* ImageCollectionViewCell.swift */,
 				DFE8CA201E0E3EFC00732D3A /* addPicToCollectionViewController.swift */,
 			);
 			name = "User Profile";
@@ -305,10 +319,12 @@
 				DF4A47901E13DA82000222BA /* DataService.swift in Sources */,
 				DF4A478E1E1389AC000222BA /* MaterialTextField.swift in Sources */,
 				DF4A478A1E13854A000222BA /* MaterialView.swift in Sources */,
+				DF7D61271E18ED790066675B /* Collection.swift in Sources */,
 				DF4A478C1E1388C1000222BA /* MaterialButton.swift in Sources */,
 				DF7FC9C11D9D4B19004064C3 /* Ripper.xcdatamodeld in Sources */,
 				DF4A47881E138531000222BA /* Constraints.swift in Sources */,
 				DFBE96471E0D46FE00CC923F /* ProfileCollectionViewController.swift in Sources */,
+				DF765CFD1E1790B40071C038 /* ImageCollectionViewCell.swift in Sources */,
 				DF7FC9B91D9D4B19004064C3 /* AppDelegate.swift in Sources */,
 				DFE8CA211E0E3EFC00732D3A /* addPicToCollectionViewController.swift in Sources */,
 				DF6AA82C1E14ED3300E5F1F1 /* BrandsViewController.swift in Sources */,
